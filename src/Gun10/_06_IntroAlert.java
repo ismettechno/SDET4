@@ -29,7 +29,7 @@ public class _06_IntroAlert extends BaseDriver {
         WebElement clickMe1=driver.findElement(By.cssSelector("button[onclick='myAlertFunction()']"));
         clickMe1.click();
 
-        MyFunc.Bekle(2);
+       // MyFunc.Bekle(2);
         driver.switchTo().alert().accept(); // Alert kutucuğuna geçildi ve (Accept)OK butonuna tıklandı.
         //OK bastığın anda asıl sayfaya dönmüş oluyorsun
         MyFunc.Bekle(2);

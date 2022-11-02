@@ -43,15 +43,15 @@ public class _02_SenaryoXPath extends BaseDriver {
         //1.ürün
         WebElement BackpackElement=driver.findElement(By.xpath("//div[text()='Sauce Labs Backpack']"));
         BackpackElement.click();
-        MyFunc.Bekle(1);
+        //MyFunc.Bekle(1);
 
         WebElement addToCart=driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-backpack']"));
         addToCart.click();
-        MyFunc.Bekle(1);
+        //MyFunc.Bekle(1);
 
         WebElement buttonBack=driver.findElement(By.xpath("//button[text()='Back to products']"));
         buttonBack.click();
-        MyFunc.Bekle(1);
+        //MyFunc.Bekle(1);
 
 
         //2.ürün
@@ -66,28 +66,28 @@ public class _02_SenaryoXPath extends BaseDriver {
         //sepete tıklattık
         WebElement sepet=driver.findElement(By.xpath("//a[@class='shopping_cart_link']"));
         sepet.click();
-        MyFunc.Bekle(1);
+        //MyFunc.Bekle(1);
 
         WebElement buttonCheckOut=driver.findElement(By.xpath("//button[@id='checkout']"));
         buttonCheckOut.click();
-        MyFunc.Bekle(1);
+        //MyFunc.Bekle(1);
 
         // bilgi girişi
         WebElement firstname=driver.findElement(By.xpath("//input[@name='firstName']"));
         firstname.sendKeys("ismet");
-        MyFunc.Bekle(1);
+        //MyFunc.Bekle(1);
 
         WebElement lastname=driver.findElement(By.xpath("//input[@id='last-name']"));
         lastname.sendKeys("temur");
-        MyFunc.Bekle(1);
+        //MyFunc.Bekle(1);
 
         WebElement zipcode=driver.findElement(By.xpath("//input[@id='postal-code']"));
         zipcode.sendKeys("232333");
-        MyFunc.Bekle(1);
+        //MyFunc.Bekle(1);
 
         WebElement btnContinue=driver.findElement(By.xpath("//input[@id='continue']"));
         btnContinue.click();
-        MyFunc.Bekle(1);
+        //MyFunc.Bekle(1);
 
          // ürünlerin ücretleri
        List<WebElement> ucretler=driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
