@@ -25,6 +25,9 @@ public class _05_WindowsSwitch extends BaseDriver {
     {
         driver.get("https://www.selenium.dev/");
 
+        String anaSayfaWindowID= driver.getWindowHandle(); // bulunduğum sayfanın/window/tab ID sini aldım.
+        System.out.println("anaSayfaWindowID = " + anaSayfaWindowID);
+
         List<WebElement> linkler=driver.findElements(By.cssSelector("a[target='_blank']"));
 
         for(WebElement link: linkler)
@@ -42,7 +45,17 @@ public class _05_WindowsSwitch extends BaseDriver {
 
         // TODO:
         //burada önce ana sayfaya geçelim.
-        //sonra ana sayfa harci diğerlerini kapatalım.
+        driver.switchTo().window(anaSayfaWindowID);
+
+        //sonra ana sayfa harici diğerlerini kapatalım.
+        for(String id : windowIdler)
+        {
+            if (id.equals(anaSayfaWindowID))
+                continue; // sadece bu adımı pass geçti, kendin sonra gelenleri çalıştırmadı
+
+            driver.switchTo().window(id);
+            driver.close(); // sadece bulunduğum wındw u kapatır
+        }
 
         MyFunc.Bekle(10);
         driverBekleKapat();
