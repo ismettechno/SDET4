@@ -1,4 +1,4 @@
-package Gun13;
+package Gun14;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -7,13 +7,10 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.time.Duration;
 
-public class _05_RobotFileUpload2 extends BaseDriver {
+public class _01_RobotFileUpload2 extends BaseDriver {
 
     @Test
     public void Test1() throws AWTException {
